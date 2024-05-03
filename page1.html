@@ -47,20 +47,27 @@
         }
 
         .blog-post-image {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            margin-bottom: 20px;
-        }
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-bottom: 20px;
+}
 
-        .blog-post-image img {
-            width: 100%; /* Ensure the image fills the width of its container */
-            height: 400px; /* Adjust this value to set the desired height of the image */
-            object-fit: cover; /* Maintain aspect ratio and cover the container */
-            vertical-align: middle;
-        }
+.blog-post-image img {
+    width: 100%; /* Ensure the image fills the width of its container */
+    height: 400px; /* Adjust this value to set the desired height of the image */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    vertical-align: middle;
+    transition: filter 0.3s ease; /* Added transition for smooth effect */
+    filter: blur(0); /* Initial state without blur */
+}
+
+.blog-post-image:hover img {
+    filter: blur(5px); /* Apply blur effect on image when hovered */
+}
+
 
         .image-title {
             position: absolute;
@@ -91,6 +98,7 @@
             object-fit: cover;
             margin-right: 20px;
         }
+        
 
         .author-details {
             display: flex;
@@ -127,7 +135,27 @@
             margin-bottom: 10px;
         }
     </style>
+
+
+<nav class="navbar" id="navbar">
+    <div class="navbar-brand">
+        <a href="https://rb.gy/1bbm3z" class="navbar-logo">
+            <img src="images/IMG.png" alt="Logo">
+        </a>
+        <span>K754a Studios</span>
+    </div>
+    <ul class="navbar-menu">
+        <li class="navbar-item"><a href="#" class="navbar-link"><h3>Home</h3></a></li>
+        <li class="navbar-item"><a href="#" class="navbar-link"><h3>Devlogs</h3></a></li>
+        <li class="navbar-item"><a href="#" class="navbar-link"><h3>Games</h3></a></li>
+        <li class="navbar-item"><a href="#" class="navbar-link"><h3>Contact</h3></a></li>
+    </ul>
+</nav>
+
+
 </head>
+
+
 <body>
 
 <!-- Blog Post Section -->
