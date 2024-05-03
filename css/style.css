@@ -93,6 +93,7 @@ body {
 }
 .blog-box:hover .blog-box-img img{
     filter: blur(3px);
+    transform: scale(1.1); 
 }
 .blog-box:hover .blog-box-img a{
     display: flex;
