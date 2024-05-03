@@ -19,6 +19,9 @@ ul{
     padding: 50px 0px;
     background-color: #f9f8ff;
 }
+body {
+    background-color: #f9f8ff;
+}
 .blog-heading h3{
     font-size:5rem;
     color: #252525;
@@ -82,7 +85,7 @@ ul{
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background-color: #ffffff;
+    background-color: #f9f8ff;
     color: #252525;
     box-shadow: 2px 2px 30px rgba(20, 97, 212, 0.12);
     display: none;
@@ -158,6 +161,63 @@ ul{
     color: #797979;
     font-size: 0.8rem;
     font-weight: 500;
+}
+.navbar {
+    background-color: #f9f8ff;
+    color: #f9f8ff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #797979;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+.navbar-brand:hover {
+    color: #999999;
+}
+
+.navbar-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.navbar-logo img {
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-item {
+    margin-left: 20px;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: #797979;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+    color: #999999;
 }
 @media(max-width:920px){
     .blog-box-container{
