@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+    <link rel="icon" type="image/x-icon" href="images/main.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f8ff;
+        }
+
+        #blog-post {
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+
+        .blog-post-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .blog-post-header h1 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        .blog-post-meta {
+            color: #666666;
+            font-size: 14px;
+        }
+
+        .blog-post-content {
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .blog-post-image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-bottom: 20px;
+
+    
+}
+
+
+
+.blog-post-image img {
+    width: 100%; /* Ensure the image fills the width of its container */
+    height: 400px; /* Adjust this value to set the desired height of the image */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    vertical-align: middle;
+    transition: filter 0.3s ease; /* Added transition for smooth effect */
+    filter: blur(0); /* Initial state without blur */
+}
+
+.blog-post-image:hover img {
+    filter: blur(5px); /* Apply blur effect on image when hovered */
+}
+
+
+        .image-title {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #ffffff;
+            font-size: 34px;
+            font-weight: bold;
+            text-align: left;
+            padding: 10px 20px; /* Added padding for better appearance */
+            border-radius: 5px; /* Added border radius for better appearance */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added shadow */
+        }
+
+        .author-info {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .author-info img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        
+
+        .author-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .author-name {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: -10px;
+            margin-left: -20px;
+        }
+
+        .publish-date {
+            color: #666666;
+            font-size: 14px;
+            margin-top: 0px;
+            margin-left: -20px;
+        }
+
+        .text-info {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .blog-post-text {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .blog-post-text p {
+            margin-bottom: 10px;
+        }
+    </style>
+
+
+
+<nav class="navbar" id="navbar">
+    <div class="navbar-brand">
+        <a href="https://rb.gy/1bbm3z" class="navbar-logo">
+            <img src="images/IMG.png" alt="Logo">
+        </a>
+        <span>K754a Studios</span>
+    </div>
+    <ul class="navbar-menu">
+        <li class="navbar-item"><a href="#" class="navbar-link"><h3>Home</h3></a></li>
+        <li class="navbar-item"><a href="./" class="navbar-link"><h3>Devlogs</h3></a></li>
+        <li class="navbar-item"><a href="#" class="navbar-link"><h3>Games</h3></a></li>
+        <li class="navbar-item"><a href="#" class="navbar-link"><h3>Contact</h3></a></li>
+    </ul>
+</nav>
+
+
+</head>
+
+
+<body>
+
+<!-- Blog Post Section -->
+<section id="blog-post">
+    <div class="blog-post-header">
+    </div>
+    <div class="blog-post-content">
+        <div class="blog-post-image">
+            <img src="images/post1.png" alt="Blog Post Image">
+            <div class="image-title">How I generated random dungeon terrain</div>
+        </div>
+        <div class="author-info">
+            <img src="images/IMG.png" alt="Author Image">
+            <div class="author-details">
+                <div class="author-name">K754a</div>
+                <div class="publish-date">May 1, 2023</div>
+            </div>
+        </div>
+    </div>
+    <div class="text-info">
+        <p>    Hi So, when it comes to making terrains and 2D levels, there are lots of different algorithms, I picked Random Walk generation. </p>
+      
+        <!-- More content goes here -->
+    </div>
+</section>
+
+</body>
+</html>
