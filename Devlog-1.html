@@ -181,10 +181,84 @@
         </div>
     </div>
     <div class="text-info">
-        <p>    Hi So, when it comes to making terrains and 2D levels, there are lots of different algorithms, I picked Random Walk generation. </p>
-      
-        <!-- More content goes here -->
-    </div>
+        <pre>
+            Hi! So, when it comes to making terrains and 2D levels, there are lots of different algorithms, I picked Random Walk generation.
+    
+            <strong>But what is a random generation algorithm?"</strong>
+    
+                A random walk generation algorithm is an equation that calculates the next place to generate something.
+            
+                <strong>An example could be:</strong> 
+                        <big><strong>(X<sub>n+1</sub>, Y<sub>n+1</sub>) = (X<sub>n</sub>, Y<sub>n</sub>) + (ϵ<sub>x</sub>, ϵ<sub>y</sub>)</strong></big>
+
+                <strong>But what does this equation do?</strong>
+
+                        <strong>X<sub>n+1</sub>, <strong>Y<sub>n+1</sub>  represents the position (POS) after <sub>n+1</sub> steps in 2d space (X, Y)
+
+                              <strong>X<sub>n</sub>, <strong>Y<sub>n</sub> is the POS after <sub>n</sub> steps
+                               
+
+                              <strong>(ϵ<sub>x</sub>, ϵ<sub>y</sub>)</strong> is the random values, it can be (-1, -1), (-1, 0), (-1, 1) (0, -1)...
+
+                                Then with that we move the walker to that square and generate again.
+
+                                If we want to prevent spawning on the same tile, we check if there is a square on the tile, if there's not we generate, if there is we regenerate.
+                                </strong></strong></strong></strong>
+
+            Here is an example of it being done:
+               <center><img id="gif" src="images/example.gif" alt="Your GIF description" width="300" height="300"></center>
+
+
+
+               <big> <center><strong>How did we texture the tiles?</strong></center></big>
+
+               The way we textured the tiles was by checking all the tiles around the first tile, then we generated a code based off of the tiles around it.
+               We mached the code in a database and from that set it to the tile.
+               
+
+               <center><img id="gif" src="images/example2.gif" alt="Your GIF description" width="300" height="300"></center>
+
+
+               The generated code can look like this, depending on the position:
+
+               -0b1111
+
+               -0b10100000
+
+               -0b10000110
+
+               -0b0101
+
+
+
+               This is the code that sets the tile in the tilemap:
+
+                        <span style="color: #88dd88;">
+                                else if(WallTypesHelper.wallFull.Contains(typeAsInt))
+                                {
+                                    tile = wallFull;
+                                }
+            
+            
+            </span>
+
+            <big><center>If you have any questions, you can check out my YouTube, which will have a devlog on the topic soon.</center></big>
+
+                <a href="https://www.youtube.com/channel/UCYTwA7VRlRYKzipHax_JgGg" style="text-decoration: none;">
+                    <big><strong>-MY YT</strong></big>
+                  </a>
+                  
+
+            Thank you.
+                  
+                 
+                                
+
+                                
+        </pre>
+
+
+    
 </section>
 
 </body>
