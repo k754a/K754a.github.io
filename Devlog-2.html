@@ -113,13 +113,13 @@
             font-weight: bold;
             font-size: 18px;
             margin-bottom: -10px;
+            
         }
 
         .publish-date {
             color: #666666;
             font-size: 14px;
             margin-top: 0px;
-
         }
 
         .text-info {
@@ -136,6 +136,11 @@
 
         .blog-post-text p {
             margin-bottom: 10px;
+        }
+
+        .thingy {
+            display: flex;
+            justify-content: center;
         }
     </style>
 
@@ -168,89 +173,56 @@
     </div>
     <div class="blog-post-content">
         <div class="blog-post-image">
-            <img src="images/post1.png" alt="Blog Post Image">
-            <div class="image-title">How I generated random dungeon terrain</div>
+            <img src="images/post2.png" alt="Blog Post Image">
+            <div class="image-title">How we created the art and concepts</div>
         </div>
         <div class="author-info">
-            <img src="images/IMG.png" alt="Author Image">
+            <img src="images/A-Lock8.png" alt="Author Image">
             <div class="author-details">
-                <div class="author-name">K754a</div>
-                <div class="publish-date">May 1, 2024</div>
+                <div class="author-name">A-Lock8</div>
+                <div class="publish-date">May 9, 2024</div>
             </div>
         </div>
     </div>
     <div class="text-info">
         <pre>
-            Hi! So, when it comes to making terrains and 2D levels, there are lots of different algorithms, I picked Random Walk generation.
+            <div>
+                Hello! Today I will be showing you through the 2D art process. In this article I will go through what our concepts are based off of,
+                how we chose the styles we chose, and more. Let's get into it.
     
-            <strong>But what is a random generation algorithm?"</strong>
-    
-                A random walk generation algorithm is an equation that calculates the next place to generate something.
-            
-                <strong>An example could be:</strong> 
-                        <big><strong>(X<sub>n+1</sub>, Y<sub>n+1</sub>) = (X<sub>n</sub>, Y<sub>n</sub>) + (ϵ<sub>x</sub>, ϵ<sub>y</sub>)</strong></big>
+                <strong>What is our art based off of?</strong>
+        
+                Our art is completely original! Using Aseprite, we would create a simple prototype and build and expand on it.
+                
+                <strong>An example of art evolution is:</strong> 
+                <center class="thingy">
+                    <img id="gif" src="images/gif2.gif" alt="Evolution" width="100" height="100">
+                    <img id="gif" src="images/gif1.gif" alt="Evolution" width="100" height="100">
+                </center>
+                <strong>But how do we come up with our ideas without inspiration?</strong>
 
-                <strong>But what does this equation do?</strong>
+                Even though you can just see what suits your styling, having 4 artists meant that a lot of the time, styles and format often differed.
+                To overcome this issue, we had three main artists and one artist polish everything, making sure it blended in.
+                <center><img id="gif" src="images/SC.png" alt="Your GIF description" width="500"></center>
 
-                        <strong>X<sub>n+1</sub>, <strong>Y<sub>n+1</sub>  represents the position (POS) after <sub>n+1</sub> steps in 2d space (X, Y)
+                <big><strong>How do shadows and effects work with our art?</strong></big>
 
-                              <strong>X<sub>n</sub>, <strong>Y<sub>n</sub> is the POS after <sub>n</sub> steps
-                               
+                Using the art, how do we do shadows? Or effects? The solution to the problem was by utilizing the effects system in unity,
+                which basically changes the alpha of a hidden grid system overlaying the whole game, which is used for UI and overlay. This
+                allows us to apply complex physics calculations easily to our game.
 
-                              <strong>(ϵ<sub>x</sub>, ϵ<sub>y</sub>)</strong> is the random values, it can be (-1, -1), (-1, 0), (-1, 1) (0, -1)...
+                <center><img id="png" src="images/post2.png" alt="Your GIF description" height="300"></center>
+                
 
-                                Then with that we move the walker to that square and generate again.
-
-                                If we want to prevent spawning on the same tile, we check if there is a square on the tile, if there's not we generate.
-                                </strong></strong></strong></strong>
-
-            Here is an example of it being done:
-               <center><img id="gif" src="images/example.gif" alt="Your GIF description" width="300" height="300"></center>
-
-
-
-               <big> <center><strong>How did we texture the tiles?</strong></center></big>
-
-               The way we textured the tiles was by checking all the tiles around the first tile
-               then we generated a code based off the tiles around it.
-               We mached the code in a database and from that set it to the tile.
-               
-
-               <center><img id="gif" src="images/example2.gif" alt="Your GIF description" width="300" height="300"></center>
-
-
-               The generated code can look like this, depending on the position:
-
-               -0b1111
-
-               -0b10100000
-
-               -0b10000110
-
-               -0b0101
-
-
-
-               This is the code that sets the tile in the tilemap:
-
-                        <span style="color: #88dd88;">
-                                else if(WallTypesHelper.wallFull.Contains(typeAsInt))
-                                {
-                                    tile = wallFull;
-                                }
-            
-            
-            </span>
-
-            <big><center>If you have any questions, you can check out my YouTube, which will have a devlog on the topic soon.</center></big>
+                <big><center>If you have any questions, you can check out my YouTube, which will have a devlog on the topic soon.</center></big>
 
                 <a href="https://www.youtube.com/channel/UCYTwA7VRlRYKzipHax_JgGg" style="text-decoration: none;" target="_blank">
                     <big><strong>Youtube Channel</strong></big>
-                  </a>
-                  
+                </a>
+                    
 
-            Thank you.
-                  
+                    Thank you.
+            </div>        
                  
                                 
 
