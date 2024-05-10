@@ -72,12 +72,12 @@ body {
 }
 
 .blog-box-container {
-    display: grid;
+    display: flex;
+    justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust minmax values as needed */
     grid-gap: 20px; /* Adjust the gap between boxes */
     margin-top: 50px;
-    max-width: 1050px;
-    width: 90%;
+
 }
 
 
@@ -171,6 +171,7 @@ body {
 
 .platform-logos {
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .platform-logos img {

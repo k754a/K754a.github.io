@@ -21,6 +21,7 @@ ul{
 }
 body {
     background-color: #f9f8ff;
+    min-width: 5px;
 }
 .blog-heading h3{
     font-size:5rem;
@@ -240,4 +241,32 @@ body {
     .blog-box-container{
         grid-template-columns: 1fr;
     }
+}
+
+.homeimg {
+    margin-top: 120px;
+    border-radius: 1000px;
+}
+.title {
+    margin-top: -40px;
+}
+.gamesc {
+    display: flex;
+    justify-content: center;
+
+    background-color: #333333;
+    color: #ffffff;
+    padding: 80px;
+}
+.q1 {
+    font-size: 200%;
+    margin-right: 120px;
+}
+.link3 {
+    color: #bea500;
+}
+.games9 {
+    margin-top: 265px;
+    background-color: #333333;
+    width: 100%;
 }
