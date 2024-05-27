@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Post</title>
-    <link rel="icon" type="image/x-icon" href="images/main.ico">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Dungeon Terrain Generation</title>
+  <link rel="icon" type="image/x-icon" href="images/main.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <style>
+    
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -137,128 +138,104 @@
         .blog-post-text p {
             margin-bottom: 10px;
         }
-    </style>
-
-
-
-<nav class="navbar" id="navbar">
-    <div class="navbar-brand">
-        <a href="https://rb.gy/1bbm3z" class="navbar-logo">
-            <img src="images/IMG.png" alt="Logo">
-        </a>
-        <span>K754a Studios</span>
-    </div>
-    <ul class="navbar-menu">
-        <li class="navbar-item"><a href="./home" class="navbar-link"><h3>Home</h3></a></li>
-        <li class="navbar-item"><a href="./index" class="navbar-link"><h3>Devlogs</h3></a></li>
-        <li class="navbar-item"><a href="./games" class="navbar-link"><h3>Games</h3></a></li>
-        <li class="navbar-item"><a href="./Contact" class="navbar-link"><h3>Contact</h3></a></li>
-    </ul>
-</nav>
-
-
+        .container1 {
+            padding: 32px;
+            display: block;
+        }
+    
+  </style>
 </head>
-
-
 <body>
 
-<!-- Blog Post Section -->
 <section id="blog-post">
-    <div class="blog-post-header">
+  <div class="blog-post-header">
+    <h1>How I Generated Random Dungeon Terrain</h1>
+  </div>
+  <div class="blog-post-content">
+    <div class="blog-post-image">
+      <img src="images/post1.png" alt="Blog Post Image">
+      <div class="image-title">Random Dungeon Terrain Generation</div>
     </div>
-    <div class="blog-post-content">
-        <div class="blog-post-image">
-            <img src="images/post1.png" alt="Blog Post Image">
-            <div class="image-title">How I generated random dungeon terrain</div>
-        </div>
-        <div class="author-info">
-            <img src="images/IMG.png" alt="Author Image">
-            <div class="author-details">
-                <div class="author-name">K754a</div>
-                <div class="publish-date">May 1, 2024</div>
-            </div>
-        </div>
+    <div class="author-info">
+      <img src="images/IMG.png" alt="Author Image">
+      <div class="author-details">
+        <div class="author-name">K754a</div>
+        <div class="publish-date">May 1, 2024</div>
+      </div>
     </div>
-    <div class="text-info">
-        <pre>
-            Hi! So, when it comes to making terrains and 2D levels, there are lots of different algorithms, I picked Random Walk generation.
-    
-            <strong>But what is a random generation algorithm?"</strong>
-    
-                A random walk generation algorithm is an equation that calculates the next place to generate something.
-            
-                <strong>An example could be:</strong> 
-                        <big><strong>(X<sub>n+1</sub>, Y<sub>n+1</sub>) = (X<sub>n</sub>, Y<sub>n</sub>) + (ϵ<sub>x</sub>, ϵ<sub>y</sub>)</strong></big>
+  </div>
+  <div class="text-info">
+    <div class="container1">
+      <p>Creating random terrains and 2D levels involves various algorithms. In this post, I'll explore using a Random Walk generation approach.</p>
 
-                <strong>But what does this equation do?</strong>
+      <h2>What is a Random Walk Generation Algorithm?</h2>
 
-                        <strong>X<sub>n+1</sub>, <strong>Y<sub>n+1</sub>  represents the position (POS) after <sub>n+1</sub> steps in 2d space (X, Y)
+      <p>A random walk generation algorithm is a mathematical formula that determines the next location for element placement. Imagine a walker moving on a grid, taking random steps (up, down, left, or right) at each turn. This algorithm replicates that movement to create a path or fill an area.</p>
 
-                              <strong>X<sub>n</sub>, <strong>Y<sub>n</sub> is the POS after <sub>n</sub> steps
-                               
+      <h3>Example: Random Walk Equation</h3>
 
-                              <strong>(ϵ<sub>x</sub>, ϵ<sub>y</sub>)</strong> is the random values, it can be (-1, -1), (-1, 0), (-1, 1) (0, -1)...
+      <p>Here's a simplified example of the random walk equation in two dimensions (X and Y):</p>
 
-                                Then with that we move the walker to that square and generate again.
+      <pre>(X<sub>n+1</sub>, Y<sub>n+1</sub>) = (X<sub>n</sub>, Y<sub>n</sub>) + (ϵ<sub>x</sub>, ϵ<sub>y</sub>)</pre>
 
-                                If we want to prevent spawning on the same tile, we check if there is a square on the tile, if there's not we generate.
-                                </strong></strong></strong></strong>
+      <p>Let's break down the equation:</p>
 
-            Here is an example of it being done:
-               <center><img id="gif" src="images/example.gif" alt="Your GIF description" width="300" height="300"></center>
+      <ul>
+        <li>(X<sub>n+1</sub>, Y<sub>n+1</sub>): Represents the position (POS) after n+1 steps in 2D space (X, Y coordinates).</li>
+        <li>(X<sub>n</sub>, Y<sub>n</sub>): Represents the position (POS) after n steps.</li>
+        <li>(ϵ<sub>x</sub>, ϵ<sub>y</sub>): Represents the random values, which can be (-1, -1), (-1, 0), (-1, 1), (0, -1), and so on, indicating the direction of the step.</li>
+      </ul>
 
+      <p>With each step, the walker moves to the new calculated square and repeats the process, generating a random path.</p>
 
+      <h3>Preventing Overlapping Steps</h3>
 
-               <big> <center><strong>How did we texture the tiles?</strong></center></big>
+      <p>To ensure the walker doesn't occupy the same space twice, we can check if a square is already filled before placing something there. If it's empty, we proceed with generation.</p>
 
-               The way we textured the tiles was by checking all the tiles around the first tile
-               then we generated a code based off the tiles around it.
-               We mached the code in a database and from that set it to the tile.
-               
+      <h2>Example of Random Walk in Action</h2>
 
-               <center><img id="gif" src="images/example2.gif" alt="Your GIF description" width="300" height="300"></center>
+      <center><img id="gif" src="images/example.gif" alt="Random Walk Example" width="300" height="300"></center>
 
+      <h2>How Did We Texture the Tiles?</h2>
 
-               The generated code can look like this, depending on the position:
+      <p>Assigning textures to the tiles involved examining the surrounding tiles of the initial tile. Based on this information, we generated a code that represented the tile's configuration. This code was then matched against a database to determine the appropriate texture.</p>
 
-               -0b1111
+      <center><img id="gif" src="images/example2.gif" alt="Tile Texturing Example" width="300" height="300"></center>
 
-               -0b10100000
+      <p>The generated code might look something like this, depending on the tile's position relative to its neighbors:</p>
 
-               -0b10000110
+      <pre>
+      -0b1111 (all sides connected)
+      -0b10100000 (top and bottom connected)
+      -0b10000110 (right and bottom connected)
+      -0b0101 (top and left connected)
+      </pre>
 
-               -0b0101
+      <p>This code is then used to set the tile's texture in the tilemap.</p>
 
+      <h3>Code Snippet (Example):</h3>
 
+      <pre>
+      <span style="color: #88dd88;">
+      if (code == wallFullCode) {
+          tile = wallFull;
+      }
+      </span>
+      </pre>
 
-               This is the code that sets the tile in the tilemap:
+      <p>(Note: This is a simplified representation. The actual code might involve a lookup table or a more complex logic depending on your implementation.)</p>
 
-                        <span style="color: #88dd88;">
-                                else if(WallTypesHelper.wallFull.Contains(typeAsInt))
-                                {
-                                    tile = wallFull;
-                                }
-            
-            
-            </span>
+      <h2>Conclusion</h2>
 
-            <big><center>If you have any questions, you can check out my YouTube, which will have a devlog on the topic soon.</center></big>
+      <p>Random walk generation is a useful technique for creating interesting and varied dungeon terrains. If you have any further questions, feel free to check out my YouTube channel, where I'll be uploading a devlog on this topic soon!</p>
 
-                <a href="https://www.youtube.com/channel/UCYTwA7VRlRYKzipHax_JgGg" style="text-decoration: none;" target="_blank">
-                    <big><strong>Youtube Channel</strong></big>
-                  </a>
-                  
+      <a href="https://www.youtube.com/channel/UCYTwA7VRlRYKzipHax_JgGg" style="text-decoration: none;" target="_blank">
+        <big><strong>YouTube Channel</strong></big>
+      </a>
 
-            Thank you.
-                  
-                 
-                                
-
-                                
-        </pre>
-
-
-    
+      <p>Thank you for reading!</p>
+    </div>
+  </div>
 </section>
 
 </body>

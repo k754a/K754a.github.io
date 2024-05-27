@@ -244,7 +244,7 @@ body {
 }
 
 .homeimg {
-    margin-top: 120px;
+    margin-top: 140px;
     border-radius: 1000px;
 }
 .title {
@@ -266,7 +266,42 @@ body {
     color: #bea500;
 }
 .games9 {
-    margin-top: 265px;
+    margin-top: 295px;
     background-color: #333333;
     width: 100%;
+}
+
+.games8 {
+    background-color: #333333;
+    width: 100%;
+}
+.contact {
+    margin-top: 0px;
+    background-color: #333333;
+    width: 100%;
+    margin-bottom: 0px;
+}
+.fex {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.gamesb {
+    display: block;
+
+    background-color: #333333;
+    color: #ffffff;
+    padding: 8px;
+}
+.youtd {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+.youtd:hover {
+    color: #cbcbcb;
+}
+.smth {
+    margin: 48px;
+    margin-left: 128px;
+    margin-right: 128px;
 }
