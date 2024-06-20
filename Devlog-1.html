@@ -142,15 +142,29 @@
             padding: 32px;
             display: block;
         }
+        .Bottommargin {
+          margin-bottom: 30px;
+        }
     
   </style>
+  <nav class="navbar" id="navbar">
+    <div class="navbar-brand">
+        <a href="https://rb.gy/1bbm3z" class="navbar-logo">
+            <img src="images/IMG.png" alt="Logo">
+        </a>
+        <span>K754a Studios</span>
+    </div>
+    <ul class="navbar-menu">
+        <li class="navbar-item"><a href="./home" class="navbar-link"><h3>Home</h3></a></li>
+        <li class="navbar-item"><a href="./" class="navbar-link"><h3>Devlogs</h3></a></li>
+        <li class="navbar-item"><a href="./games" class="navbar-link"><h3>Games</h3></a></li>
+        <li class="navbar-item"><a href="./Contact" class="navbar-link"><h3>Contact</h3></a></li>
+    </ul>
+</nav>
 </head>
 <body>
 
 <section id="blog-post">
-  <div class="blog-post-header">
-    <h1>How I Generated Random Dungeon Terrain</h1>
-  </div>
   <div class="blog-post-content">
     <div class="blog-post-image">
       <img src="images/post1.png" alt="Blog Post Image">
@@ -166,19 +180,19 @@
   </div>
   <div class="text-info">
     <div class="container1">
-      <p>Creating random terrains and 2D levels involves various algorithms. In this post, I'll explore using a Random Walk generation approach.</p>
+      <p class="Bottommargin">Creating random terrains and 2D levels involves various algorithms. In this post, I'll explore using a Random Walk generation approach.</p>
 
-      <h2>What is a Random Walk Generation Algorithm?</h2>
+      <h2 class="Bottommargin">What is a Random Walk Generation Algorithm?</h2>
 
-      <p>A random walk generation algorithm is a mathematical formula that determines the next location for element placement. Imagine a walker moving on a grid, taking random steps (up, down, left, or right) at each turn. This algorithm replicates that movement to create a path or fill an area.</p>
+      <p class="Bottommargin">A random walk generation algorithm is a mathematical formula that determines the next location for element placement. Imagine a walker moving on a grid, taking random steps (up, down, left, or right) at each turn. This algorithm replicates that movement to create a path or fill an area.</p>
 
-      <h3>Example: Random Walk Equation</h3>
+      <h3 class="Bottommargin">Example: Random Walk Equation</h3>
 
-      <p>Here's a simplified example of the random walk equation in two dimensions (X and Y):</p>
+      <p class="Bottommargin">Here's a simplified example of the random walk equation in two dimensions (X and Y):</p>
 
-      <pre>(X<sub>n+1</sub>, Y<sub>n+1</sub>) = (X<sub>n</sub>, Y<sub>n</sub>) + (ϵ<sub>x</sub>, ϵ<sub>y</sub>)</pre>
+      <pre class="Bottommargin">(X<sub>n+1</sub>, Y<sub>n+1</sub>) = (X<sub>n</sub>, Y<sub>n</sub>) + (ϵ<sub>x</sub>, ϵ<sub>y</sub>)</pre>
 
-      <p>Let's break down the equation:</p>
+      <p class="Bottommargin">Let's break down the equation:</p>
 
       <ul>
         <li>(X<sub>n+1</sub>, Y<sub>n+1</sub>): Represents the position (POS) after n+1 steps in 2D space (X, Y coordinates).</li>
@@ -188,15 +202,15 @@
 
       <p>With each step, the walker moves to the new calculated square and repeats the process, generating a random path.</p>
 
-      <h3>Preventing Overlapping Steps</h3>
+      <h3 class="Bottommargin">Preventing Overlapping Steps</h3>
 
-      <p>To ensure the walker doesn't occupy the same space twice, we can check if a square is already filled before placing something there. If it's empty, we proceed with generation.</p>
+      <p class="Bottommargin">To ensure the walker doesn't occupy the same space twice, we can check if a square is already filled before placing something there. If it's empty, we proceed with generation.</p>
 
       <h2>Example of Random Walk in Action</h2>
 
       <center><img id="gif" src="images/example.gif" alt="Random Walk Example" width="300" height="300"></center>
 
-      <h2>How Did We Texture the Tiles?</h2>
+      <h2 class="Bottommargin">How Did We Texture the Tiles?</h2>
 
       <p>Assigning textures to the tiles involved examining the surrounding tiles of the initial tile. Based on this information, we generated a code that represented the tile's configuration. This code was then matched against a database to determine the appropriate texture.</p>
 
@@ -227,11 +241,11 @@
 
       <h2>Conclusion</h2>
 
-      <p>Random walk generation is a useful technique for creating interesting and varied dungeon terrains. If you have any further questions, feel free to check out my YouTube channel, where I'll be uploading a devlog on this topic soon!</p>
+      <p class="Bottommargin">Random walk generation is a useful technique for creating interesting and varied dungeon terrains. If you have any further questions, feel free to check out my YouTube channel, where I'll be uploading a devlog on this topic soon!</p>
 
       <a href="https://www.youtube.com/channel/UCYTwA7VRlRYKzipHax_JgGg" style="text-decoration: none;" target="_blank">
         <big><strong>YouTube Channel</strong></big>
-      </a>
+      </a class="Bottommargin">
 
       <p>Thank you for reading!</p>
     </div>
