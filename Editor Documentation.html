@@ -1,78 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LS3B6CQQ7D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LS3B6CQQ7D');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Editor Documentation</title>
   <link rel="icon" type="image/x-icon" href="images/main.ico">
-  <link rel="stylesheet" href="css/stylemain.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
   <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #363636;
-            color: hsl(0, 0%, 100%);
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-        }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f8ff;
+      color: #252525;
+      display: flex;
+      flex-direction: column;
+      height: 1000vh;
+    }
 
-     
 
-        .sidebar {
-            width: 200px;
-            padding: 20px;
-            background-color: #363636;
-            color: #ffffff;
-            height: calc(100% - 60px); /* Adjust height to account for navbar */
-            overflow-y: auto;
-        }
 
-        .sidebar ul {
-            list-style-type: none;
-            padding: 0;
-        }
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+    }
 
-        .sidebar ul li {
-            padding: 10px 0;
-            cursor: pointer;
-        }
+    .navbar-logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
 
-        .sidebar ul li:hover {
-            text-decoration: underline;
-        }
+    .navbar-menu {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
 
-        .content {
-            flex: 1;
-            padding: 20px;
-            background-color: #363636;
-            overflow-y: auto;
-        }
+    .navbar-item {
+      margin-left: 20px;
+    }
 
-        h1, h2 {
-            color: #ffffff;
-        }
+    .navbar-link {
+      text-decoration: none;
+      color: #252525;
+      font-weight: 500;
+    }
 
-        a {
-            color: #569cd6;
-            text-decoration: none;
-        }
+    .container {
+      display: flex;
+      flex: 1;
+      padding: 20px;
+    }
 
-        a:hover {
-            text-decoration: underline;
-        }
+    .sidebar {
+      width: 200px;
+      padding: 20px;
+      background-color: #f9f8ff;
+      color: #252525;
+      height: calc(100%);
+      overflow-y: auto;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
-        .container {
-            display: flex;
-            flex: 1;
-        }
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
 
-       
+    .sidebar ul li {
+      padding: 10px 0;
+      cursor: pointer;
+    }
+
+    .sidebar ul li:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    h1, h2 {
+      color: #252525;
+    }
+
+    a {
+      color: #0a0ef8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    hr.solid {
+      border-top: 8px solid #bbb;
+      border-radius: 5px;
+    }
+
+    .video-container {
+    width: 80%;
+    max-width: 800px;
+    background: #000;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .content {
+        width: 100%;
+      }
+    }
+    
+    video {
+    width: 80%;
+    border-radius: 10px;
+}
   </style>
 </head>
 <body>
@@ -89,27 +161,47 @@
         <li class="navbar-item"><a href="./games" class="navbar-link"><h3>Games</h3></a></li>
         <li class="navbar-item"><a href="./Contact" class="navbar-link"><h3>Contact</h3></a></li>
     </ul>
-</nav>
-
-    <div class="container">
-        <div class="sidebar">
-            <ul>
-                <li>Overview</li>
-                <li>Setup</li>
-                <li>Get Started</li>
-        
-            </ul>
-        </div>
-        <div class="content">
-            <h1>Getting Started</h1>
-            <p>This is my documentation for my editor. This is for developers, so if you don't really want to edit or learn about how I made this, that's okay!</p>
-
-            
-            <!-- <h2>First Steps</h2>
-            <ul>
-               
-            </ul> -->
-        </div>
+  </nav>
+  <div class="container">
+    <div class="sidebar">
+      <ul>
+        <li>Get Started</li>
+        <li>Overview</li>
+        <li>Setup</li>
+      </ul>
     </div>
+    <div class="content">
+      <h1>Getting Started</h1>
+      <p>This is my documentation for my editor. This is for developers, so if you don't really want to edit or learn about how I made this, that's okay!</p>
+      <br>
+      <p>This editor is created in C++ and some C. It is lightweight and you can edit HTML, CSS, text, and Python files!</p>
+      <small><small>**Note: This editor can run other files, but the files above have built-in IntelliCode**</small></small>
+      <br>
+      <br>
+      <p>The editor right now cannot be compiled without issues with font files, so for now there are no compiled binaries.</p>
+      <p>All the files you need are included in the GitHub repository.</p>
+      <br>
+      <br>
+      <br>
+      <h1>How to Install</h1>
+      <p>First, download it from my <a href="https://github.com/k754a/C-Custom-Code-Editor">Github</a> and extract the zip file.</p>
+      
+      <br>
+      <p>If you don't have it installed already, <a href="https://github.com/k754a/C-Custom-Code-Editor">install Visual Studio</a> and open it.</p>
+      <br>
+     
+      <p>You want to open the project in Visual Studio and load the project. Here's a short video that explains how to do it.</p>
+      <br>
+      <br>
+      
+      <video controls>
+        <source src="images/2024-07-28 09-30-59.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      
+
+
+    </div>
+  </div>
 </body>
 </html>
