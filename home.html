@@ -26,22 +26,32 @@
     <!--==Font-Awesome=================-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
-    <nav class="navbar" id="navbar">
-        <div class="navbar-brand">
-            <a href="https://rb.gy/1bbm3z" class="navbar-logo">
-                <img src="images/IMG.png" alt="Logo">
-            </a>
-            <span>K754a Studios</span>
+    <body>
+        <nav class="navbar" id="navbar">
+            <div class="navbar-brand">
+                <a href="https://rb.gy/1bbm3z" class="navbar-logo">
+                    <img src="images/IMG.png" alt="Logo">
+                </a>
+                <span>K754a Studios</span>
+            </div>
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="./home" class="navbar-link"><h3>Home</h3></a></li>
+                <li class="navbar-item"><a href="./" class="navbar-link"><h3>Devlogs</h3></a></li>
+                <li class="navbar-item"><a href="./games" class="navbar-link"><h3>Games</h3></a></li>
+                <li class="navbar-item"><a href="./Contact" class="navbar-link"><h3>Contact</h3></a></li>
+            </ul>
+        </nav>
+    
+        <div class="blog-heading">
+            <!-- Blog content here -->
         </div>
-        <ul class="navbar-menu">
-            <li class="navbar-item"><a href="./home" class="navbar-link"><h3>Home</h3></a></li>
-            <li class="navbar-item"><a href="./" class="navbar-link"><h3>Devlogs</h3></a></li>
-            <li class="navbar-item"><a href="./games" class="navbar-link"><h3>Games</h3></a></li>
-            <li class="navbar-item"><a href="./Contact" class="navbar-link"><h3>Contact</h3></a></li>
-        </ul>
-    </nav>
-</head>
-<body>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script>
+            // GSAP animations
+            gsap.from(".navbar", { duration: 1, y: -100, opacity: 0 });
+            gsap.from(".navbar-item", { duration: 1, x: -100, opacity: 0, stagger: 0.2 });
+        </script>
 
     <!--==Blog================================-->
 
